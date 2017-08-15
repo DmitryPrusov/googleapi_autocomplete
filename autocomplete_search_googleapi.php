@@ -5,8 +5,6 @@ class Form_GoogleAPI_Enchant
 {
     public function __construct()
     {
-        add_action('admin_post_nopriv_add_autocomplete', array($this, 'autocomplete_search'));
-        add_action('admin_post_add_autocomplete', array($this, 'autocomplete_search'));
         add_action('wp_print_scripts', array($this, 'run_googleapi_script'));
         add_action('wp_footer', array($this, 'my_footer_scripts'));
 
